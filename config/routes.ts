@@ -36,6 +36,12 @@
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
+	{
+		path: '/nhan-vien',
+		name: 'QuanLyNhanVien',
+		component: './NhanVien',
+		icon: 'TeamOutlined',
+	},
 
 	// DANH MUC HE THONG
 	// {
