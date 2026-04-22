@@ -20,7 +20,7 @@ const FormNhanVien = () => {
 		} else {
 			form.resetFields();
 		}
-	}, [record, isEdit]);
+	}, [record, isEdit, form]);
 
 	const onFinish = (values: any) => {
 		if (isEdit && record) {

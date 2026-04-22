@@ -19,7 +19,7 @@ export default () => {
 		setLoading(true);
 		try {
 			const result = getData();
-			setData(result);
+			setData([...result]);
 		} finally {
 			setLoading(false);
 		}

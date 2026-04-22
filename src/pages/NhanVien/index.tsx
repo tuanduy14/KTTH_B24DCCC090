@@ -35,6 +35,7 @@ import FormNhanVien from './Form';
 const { Title } = Typography;
 const { Option } = Select;
 
+
 const NhanVienPage = () => {
 	const {
 		data,
@@ -54,7 +55,7 @@ const NhanVienPage = () => {
 
 	useEffect(() => {
 		getDataNhanVien();
-	}, []);
+	}, [getDataNhanVien]);
 
 	const filteredData = useMemo(() => {
 		let result = [...data];
@@ -264,11 +265,10 @@ const NhanVienPage = () => {
 			</Card>
 
 			<Modal
-				open={visibleForm}
+				visible={visibleForm}
 				title={isEdit ? 'Chỉnh sửa nhân viên' : 'Thêm nhân viên mới'}
 				onCancel={() => setVisibleForm(false)}
 				footer={null}
-				destroyOnClose
 				width={640}
 			>
 				<FormNhanVien />
